@@ -5,11 +5,17 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ServicioApiCustomers from "./components/ServicioApiCustomers";
 import ServiceApiSuppliers from "./components/ServiceApiSuppliers";
+import Departamento from "./components/Departamento";
+import Cursos from "./components/ejemplocomunicacion/Cursos";
+import TablaMultiplicar from "./components/TablaMultiplicar";
+import Router from "./components/Router";
+import MenuRutas from "./components/MenuRutas";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
-    <ServiceApiSuppliers />
+    <MenuRutas />
+    <Router />
   </>
 );
 
