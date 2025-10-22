@@ -1,14 +1,15 @@
 import axios from "axios";
 import { useState, useRef, useEffect } from "react";
+import Global from "../Global";
 
 const ServiceApiSuppliers = () => {
   const [suppliers, setSuppliers] = useState([]);
   const [buscado, setBuscado] = useState({});
-  const URL = "https://services.odata.org/V4/Northwind/Northwind.svc/Suppliers";
   const cajaID = useRef();
 
   const loadSuppliers = () => {
-    axios.get(URL).then((response) => {
+    let request = "Suppliers";
+    axios.get(Global.northWindUrl + request).then((response) => {
       setSuppliers(response.data.value);
     });
   };
@@ -32,7 +33,7 @@ const ServiceApiSuppliers = () => {
 
   return (
     <div>
-      <h1>ServiceApiSuppliers</h1>
+      <h1>Service Api Suppliers</h1>
       <form onSubmit={getSupplier}>
         <input type="number" ref={cajaID} placeholder="Introduzca ID" />
         <button>Buscar</button>
@@ -40,7 +41,7 @@ const ServiceApiSuppliers = () => {
       <ul>
         {suppliers.map((supplier) => {
           return (
-            <li key={supplier.SupplierID}>
+            <li key={supplier.SupplierID} style={{ listStyle: "none" }}>
               ID: {supplier.SupplierID}, Contact Name: {supplier.ContactName}
             </li>
           );
