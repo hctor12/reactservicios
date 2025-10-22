@@ -4,6 +4,7 @@ import Home from "./Home";
 import NotFound from "./NotFound";
 import TablaMultiplicar from "./TablaMultiplicar";
 import Collatz from "./Collatz";
+import HospitalesMultiples from "./HospitalesMultiples";
 
 const Router = () => {
   const TablaMultiplicarElement = () => {
@@ -24,6 +25,10 @@ const Router = () => {
           element={<TablaMultiplicarElement />}
         ></Route>
         <Route path="/collatz/:miNumero" element={<CollatzElement />}></Route>
+        <Route
+          path="hospitalesmultiples"
+          element={<HospitalesMultiples />}
+        ></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>

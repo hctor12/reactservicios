@@ -5,26 +5,17 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ServicioApiCustomers from "./components/ServicioApiCustomers";
 import ServiceApiSuppliers from "./components/ServiceApiSuppliers";
-<<<<<<< HEAD
-import EmpleadosDepartamento from "./components/EmpleadosDepartamento";
-import EmpleadosOficios from "./components/EmpleadosOficios";
-=======
 import Departamento from "./components/Departamento";
 import Cursos from "./components/ejemplocomunicacion/Cursos";
 import TablaMultiplicar from "./components/TablaMultiplicar";
 import Router from "./components/Router";
 import MenuRutas from "./components/MenuRutas";
->>>>>>> 99248d0cd898242bf81f662a45acd3dac906f626
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
-<<<<<<< HEAD
-    <EmpleadosOficios />
-=======
     <MenuRutas />
     <Router />
->>>>>>> 99248d0cd898242bf81f662a45acd3dac906f626
   </>
 );
 

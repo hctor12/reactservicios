@@ -10,6 +10,9 @@ const MenuRutas = () => {
         <li>
           <a href="/tabla">Tabla Multiplicar</a>
         </li>
+        <li>
+          <a href="/hospitalesmultiples">Hospitales Múltiples</a>
+        </li>
       </ul>
     </nav>
   );
