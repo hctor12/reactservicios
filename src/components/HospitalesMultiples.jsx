@@ -51,16 +51,25 @@ const HospitalesMultiples = () => {
       "&" +
       data;
 
-    axios.put(url + request).then((response) => {});
+    axios.put(url + request).then((response) => {
+      setHospitalesSeleccionados(aux);
+    });
   };
 
   useEffect(() => {
     loadHospitales();
   }, []);
   return (
-    <div>
+    <div style={{ marginLeft: "10px" }}>
       <h1>Hospitales múltiple</h1>
-      <form>
+      <form
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "10px",
+          width: "15%",
+        }}
+      >
         <select size={8} multiple ref={selectHospital}>
           {hospitales.map((hosp, index) => {
             return (
@@ -70,7 +79,7 @@ const HospitalesMultiples = () => {
             );
           })}
         </select>
-        <label>Incrementar Salario</label>
+        <label style={{ fontWeight: "bold" }}>Incrementar Salario</label>
         <input type="number" ref={cajaIncremento} />
         <button onClick={incrementarSalario}>Incrementar</button>
         <button onClick={getHospitalesSeleccionados}>

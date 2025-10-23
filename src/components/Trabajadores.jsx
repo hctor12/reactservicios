@@ -24,12 +24,18 @@ const Trabajadores = (props) => {
 
   useEffect(() => {
     loadTrabajadores();
-  });
+  }, [props.idhospitales]);
   return (
     <div>
       <h1 style={{ color: "blue" }}>Trabajadores</h1>
       <h2 style={{ color: "red" }}>{mensaje}</h2>
-      <table>
+      <table
+        style={{
+          textAlign: "center",
+          borderCollapse: "collapse",
+        }}
+        border={1}
+      >
         <thead>
           <tr>
             <th>Apellido</th>
